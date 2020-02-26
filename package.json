@@ -1,0 +1,10 @@
+{
+  "name": "port-frame",
+  "version": "0.0.0",
+  "description": "A first approach to a portafolio describing juanramirezcastaneda's work online",
+  "main": "server.js",
+  "repository": "git@github.com:juanramirezcastaneda/port-frame.git",
+  "author": "juanramirezcastaneda <juanramirezcastaneda@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
