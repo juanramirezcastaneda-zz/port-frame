@@ -2,7 +2,6 @@
 
 require('dotenv').config();
 const express = require('express');
-const formidable = require('formidable');
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -21,7 +20,7 @@ app.use((req, res, next) => {
 });
 
 // Error Handling middleware
-app.use((err, req, res, next) => {
+app.use((err, _req, res, _next) => {
     let errCode, errMessage;
 
     if (err.errors) {
