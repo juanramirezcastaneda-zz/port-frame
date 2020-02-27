@@ -7,6 +7,9 @@
   "author": "juanramirezcastaneda <juanramirezcastaneda@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "dependencies": {
     "helmet": "^3.21.3",
     "cors": "^2.8.5",
