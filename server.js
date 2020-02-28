@@ -1,23 +1,27 @@
 'use-strict';
 
-require('dotenv').config();
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-const helmet = require('helmet');
+import dotenv from "dotenv";
+import express from 'express';
+import { urlencoded, json } from 'body-parser';
+import { hidePoweredBy, frameguard, xssFilter, noSniff } from 'helmet';
+import cors from 'cors';
 
-const cors = require('cors');
-var port = process.env.PORT || 8000;
+dotenv.config();
+
+const app = express();
+const port = process.env.PORT || 8000;
 
 app.use(express.static(__dirname));
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(urlencoded({ extended: false }));
+app.use(json());
 app.use(express.static('public'));
 
 // Security policies
-app.use(helmet.hidePoweredBy());
-app.use(helmet.frameguard({ action: 'deny' }));
+app.use(hidePoweredBy());
+app.use(frameguard({ action: 'deny' }));
+app.use(xssFilter());
+app.use(noSniff());
 
 // Not found middleware
 app.use((_req, _res, next) => {
