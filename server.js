@@ -4,6 +4,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 
 const cors = require('cors');
 var port = process.env.PORT || 8000;
@@ -14,8 +15,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+// Security policies
+app.use(helmet.hidePoweredBy());
+app.use(helmet.frameguard({ action: 'deny' }));
+
 // Not found middleware
-app.use((req, res, next) => {
+app.use((_req, _res, next) => {
     return next({ status: 404, message: 'not found' })
 });
 
