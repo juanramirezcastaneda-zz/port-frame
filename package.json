@@ -8,17 +8,19 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "nodemon --exec babel-node server.js"
+    "start": "nodemon --exec babel-node server.js",
+    "test": "jest"
   },
   "dependencies": {
+    "babel-jest": "^25.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "formidable": "^1.2.1",
     "helmet": "^3.21.3",
+    "jest": "^25.1.0",
     "mongo-db": "1.0.2",
     "mongoose": "5.8.11",
-    "prettier": "^1.19.1",
-    "jest": "^25.1.0"
+    "prettier": "^1.19.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
