@@ -22,7 +22,10 @@
     "mongo-db": "1.0.2",
     "mongoose": "5.8.11",
     "prettier": "^1.19.1",
-    "react": "^16.13.0"
+    "react": "^16.13.0",
+    "react-async": "^10.0.0",
+    "react-dom": "^16.13.0",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
