@@ -28,6 +28,10 @@ app.use(frameguard({ action: 'deny' }));
 app.use(xssFilter());
 app.use(noSniff());
 
+app.route('/').get(function(req, res) {
+  res.sendFile(process.cwd() + '/src/index.html');
+});
+
 // Not found middleware
 app.use((_req, _res, next) => {
   return next({ status: 404, message: 'not found' });
