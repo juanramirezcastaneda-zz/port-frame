@@ -1,22 +1,33 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path'),
+  webpack = require('webpack'),
+  HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    app: ['./src/App.tsx'],
+    vendor: ['react', 'react-dom'],
+  },
+  mode: 'development',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'index_bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].bundle.js',
+  },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+      {
+        test: /\.(ts|tsx)$/,
+        loader: 'ts-loader',
+      },
+      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
     ],
   },
-  mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: path.resolve(__dirname, 'src', 'index.html'),
     }),
   ],
 };
