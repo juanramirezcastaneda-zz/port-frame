@@ -5,7 +5,6 @@ const ReactDOM = require('react-dom');
 // import ReactDOM from 'react-dom';
 
 function App() {
-  console.log('bundle');
   return <div>HelloWorld</div>;
 }
 

@@ -20,7 +20,7 @@ app.use(express.static(__dirname));
 app.use(cors());
 app.use(urlencoded({ extended: false }));
 app.use(json());
-app.use(express.static('src/dist'));
+app.use(express.static('dist'));
 
 // Security policies
 app.use(hidePoweredBy());
@@ -29,7 +29,7 @@ app.use(xssFilter());
 app.use(noSniff());
 
 app.route('/').get(function(req, res) {
-  res.sendFile(process.cwd() + '/src/dist/index.html');
+  res.sendFile(process.cwd() + '/dist/index.html');
 });
 
 // Not found middleware
