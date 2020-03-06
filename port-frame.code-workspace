@@ -1,11 +1,10 @@
 {
   "folders": [
     {
-      "path": "portframe/client"
+      "path": "client"
     },
-
     {
-      "path": "portframe/design-system"
+      "path": "design-system"
     },
     {
       "path": ".",
