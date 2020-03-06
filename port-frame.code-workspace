@@ -1,7 +1,15 @@
 {
   "folders": [
     {
-      "path": "."
+      "path": "portframe/client"
+    },
+
+    {
+      "path": "portframe/design-system"
+    },
+    {
+      "path": ".",
+      "name": "root"
     }
   ],
   "settings": {}
