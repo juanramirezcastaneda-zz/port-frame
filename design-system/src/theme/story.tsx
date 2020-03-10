@@ -32,7 +32,6 @@ const StyledDiv = styled.div<any>`
 
 export const AllColors = () => {
   const colorKeys = Object.keys(theme.colors) as (keyof typeof theme.colors)[];
-  console.log(colorKeys);
   return (
     <AllColorsContainer>
       {colorKeys.map(key => (
