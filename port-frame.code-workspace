@@ -7,6 +7,9 @@
       "path": "design-system"
     },
     {
+      "path": "global-design-system"
+    },
+    {
       "path": ".",
       "name": "root"
     }
