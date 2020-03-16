@@ -1,11 +1,11 @@
 import React from 'react';
 import theme from '.';
-// import { withKnobs, select } from '@storybook/addon-knobs';
-import styled, { css } from 'styled-components';
+import { withKnobs } from '@storybook/addon-knobs';
+import styled from 'styled-components';
 
 export default {
   title: 'Theme',
-  //   decorators: [withKnobs],
+  decorators: [withKnobs],
 };
 
 const AllColorsContainer = styled.div`
