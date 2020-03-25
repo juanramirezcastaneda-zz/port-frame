@@ -1,0 +1,9 @@
+{
+  "name": "@port-frame/babel-config",
+  "version": "1.0.0",
+  "description": "Babel presets configuration",
+  "main": "index.js",
+  "author": "juanramirezcastaneda",
+  "license": "MIT",
+  "private": true
+}

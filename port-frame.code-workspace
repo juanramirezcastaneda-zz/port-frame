@@ -7,6 +7,9 @@
       "path": "global-design-system"
     },
     {
+      "path": "babel-config"
+    },
+    {
       "path": ".",
       "name": "root"
     }
