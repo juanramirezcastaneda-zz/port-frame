@@ -1,13 +1,19 @@
 {
   "folders": [
     {
-      "path": "client"
+      "path": "packages/client"
     },
     {
-      "path": "global-design-system"
+      "path": "packages/global-design-system"
     },
     {
-      "path": "babel-config"
+      "path": "packages/babel-config"
+    },
+    {
+      "path": "packages/eslint-config"
+    },
+    {
+      "path": "packages/prettier-config"
     },
     {
       "path": ".",
