@@ -1,10 +1,12 @@
 {
-  "name": "@port-frame/global-design-system",
+  "name": "@port-frame/gds",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "build-storybook": "build-storybook",
-    "storybook": "start-storybook"
+    "start": "start-storybook",
+    "deploy:storybook": "storybook-to-ghpages",
+    "test": "jest"
   },
   "author": "juanramirezcastaneda",
   "license": "ISC",

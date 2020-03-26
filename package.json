@@ -6,6 +6,10 @@
   "author": "juanramirezcastaneda <juanramirezcastaneda@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "postinstall": "yarn audit --summary",
+    "start:storybook": "yarn workspace @port-frame/gds run start"
+  },
   "workspaces": [
     "packages/*"
   ]
