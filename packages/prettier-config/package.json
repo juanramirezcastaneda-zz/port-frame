@@ -1,0 +1,12 @@
+{
+  "name": "@port-frame/prettier-config",
+  "version": "1.0.0",
+  "description": "Prettier configuration ",
+  "main": "index.js",
+  "author": "juanramirezcastaneda",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prettier": "^2.0.2"
+  }
+}
