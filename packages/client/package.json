@@ -1,6 +1,6 @@
 {
   "name": "@port-frame/client",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A first approach to a portafolio describing juanramirezcastaneda's work online",
   "main": "server.js",
   "repository": "git@github.com:juanramirezcastaneda/port-frame.git",
