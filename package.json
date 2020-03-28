@@ -10,12 +10,16 @@
     "postinstall": "yarn audit --summary",
     "start:client": "yarn workspace @port-frame/client run start",
     "start:storybook": "yarn workspace @port-frame/gds run start",
-    "deploy:storybook": "yarn workspace @slb/gds run deploy:storybook"
+    "deploy:storybook": "yarn workspace @port-frame/gds run deploy:storybook"
   },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "@port-frame/babel-config": "1.0.0",
+    "@port-frame/eslint-config": "1.0.0",
+    "@port-frame/prettier-config": "1.0.0",
+    "@port-frame/stylelint-config": "1.0.0",
     "husky": "^4.2.3",
     "license-checker": "^25.0.1",
     "lint-staged": "^10.0.9",

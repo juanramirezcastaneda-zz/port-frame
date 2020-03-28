@@ -1,0 +1,15 @@
+{
+  "name": "@port-frame/stylelint-config",
+  "version": "1.0.0",
+  "description": "The style lint presets for ts files",
+  "main": "index.js",
+  "author": "juanramirezcastaneda",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "stylelint": "^13.2.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
+  }
+}
