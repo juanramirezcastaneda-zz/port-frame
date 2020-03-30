@@ -16,6 +16,10 @@
       "path": "packages/prettier-config"
     },
     {
+      "path": "packages/stylelint-config"
+    },
+
+    {
       "path": ".",
       "name": "root"
     }
