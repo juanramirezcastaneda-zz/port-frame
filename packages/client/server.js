@@ -3,12 +3,7 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import { urlencoded, json } from 'body-parser';
-import {
-  hidePoweredBy,
-  frameguard,
-  xssFilter,
-  noSniff,
-} from 'helmet';
+import { hidePoweredBy, frameguard, xssFilter, noSniff } from 'helmet';
 import cors from 'cors';
 
 dotenv.config();
@@ -38,7 +33,7 @@ app.use((_req, _res, next) => {
 });
 
 // Error Handling middleware
-app.use((err, _req, res, _next) => {
+app.use((err, _req, res) => {
   let errCode, errMessage;
 
   if (err.errors) {
@@ -59,5 +54,6 @@ app.use((err, _req, res, _next) => {
 });
 
 app.listen(port, function() {
+  // eslint-disable-next-line no-console
   console.log(`Listening to requests on http://localhost:${port}`);
 });
