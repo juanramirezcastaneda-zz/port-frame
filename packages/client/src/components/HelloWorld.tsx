@@ -7,7 +7,6 @@ export interface HelloWorldProps {
 
 export const HelloWorld = (props: HelloWorldProps) => (
   <h1>
-    Hi there from React! Welcome {props.firstName} and{' '}
-    {props.lastName}!
+    Hi there from React! Welcome {props.firstName} and {props.lastName}!
   </h1>
 );

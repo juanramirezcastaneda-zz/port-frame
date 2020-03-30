@@ -4,7 +4,4 @@ import './favicon.ico';
 
 import { HelloWorld } from './components/HelloWorld';
 
-ReactDOM.render(
-  <HelloWorld firstName={'Juan'} lastName={'Ramirez'} />,
-  document.getElementById('app'),
-);
+ReactDOM.render(<HelloWorld firstName={'Juan'} lastName={'Ramirez'} />, document.getElementById('app'));
