@@ -1,27 +1,32 @@
 {
   "folders": [
     {
-      "path": "packages/client"
-    },
-    {
+      "name": "global-design-system",
       "path": "packages/global-design-system"
     },
     {
+      "name": "client",
+      "path": "packages/client"
+    },
+    {
+      "name": "babel-config",
       "path": "packages/babel-config"
     },
     {
+      "name": "eslint-config",
       "path": "packages/eslint-config"
     },
     {
+      "name": "prettier-config",
       "path": "packages/prettier-config"
     },
     {
+      "name": "stylelint-config",
       "path": "packages/stylelint-config"
     },
-
     {
-      "path": ".",
-      "name": "root"
+      "name": "root",
+      "path": "."
     }
   ],
   "settings": {}
