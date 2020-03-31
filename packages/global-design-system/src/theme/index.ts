@@ -3,12 +3,14 @@
 import { Breakpoints, BreakpointNumbers, BreakpointsMax } from './breakpoints';
 import Colors from './colors';
 import FontSizes from './fontSizes';
+import FontFamilies from './fontFamilies';
 
 const theme = {
   breakpointNumbers: BreakpointNumbers,
   breakpoints: Breakpoints,
   breakpointsMax: BreakpointsMax,
   colors: Colors,
+  fontFamilies: FontFamilies,
   fontSizes: FontSizes,
 } as const;
 
