@@ -9,9 +9,7 @@ const fixResolvePath = (sourcePath, currentFile, opts) => {
   const basePath = path.resolve('../');
   const currentFileEndPath = currentFile.substring(basePath.length);
   const currentProject = currentFileEndPath.split(path.sep).filter(Boolean)[0];
-  const correctResolvedPath = path
-    .join(basePath, currentProject, `./${sourcePath}`)
-    .replace('~', 'src');
+  const correctResolvedPath = path.join(basePath, currentProject, `./${sourcePath}`).replace('~', 'src');
 
   return correctResolvedPath;
 };
@@ -24,11 +22,7 @@ function config() {
         {
           modules: false,
           targets: {
-            browsers: [
-              'last 1 chrome version',
-              'last 1 firefox version',
-              'last 1 safari version',
-            ],
+            browsers: ['last 1 chrome version', 'last 1 firefox version', 'last 1 safari version'],
           },
         },
       ],
