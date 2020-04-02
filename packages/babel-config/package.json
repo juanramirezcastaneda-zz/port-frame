@@ -1,11 +1,9 @@
 {
+  "private": true,
   "name": "@port-frame/babel-config",
   "version": "1.0.0",
-  "description": "Babel presets configuration",
+  "description": "Babel presets",
   "main": "index.js",
-  "author": "juanramirezcastaneda",
-  "license": "MIT",
-  "private": true,
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
