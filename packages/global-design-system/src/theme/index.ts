@@ -6,9 +6,9 @@ import FontSizes from './fontSizes';
 import FontFamilies from './fontFamilies';
 
 const theme = {
+  breakpointsMax: BreakpointsMax,
   breakpointNumbers: BreakpointNumbers,
   breakpoints: Breakpoints,
-  breakpointsMax: BreakpointsMax,
   colors: Colors,
   fontFamilies: FontFamilies,
   fontSizes: FontSizes,
