@@ -1,28 +1,28 @@
 {
+  "private": true,
   "name": "@port-frame/root",
   "version": "1.0.0",
-  "description": "Root point for portafolio",
-  "repository": "git@github.com:juanramirezcastaneda/port-frame.git",
-  "author": "juanramirezcastaneda <juanramirezcastaneda@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "postinstall": "yarn audit --summary",
-    "start:client": "yarn workspace @port-frame/client run start",
-    "start:storybook": "yarn workspace @port-frame/gds run start",
-    "deploy:storybook": "yarn workspace @port-frame/gds run deploy:storybook"
-  },
+  "author": "juanramirezcastaneda",
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "postinstall": "yarn audit --summary",
+    "start": "npm-run-all -p start:*",
+    "start:client": "yarn workspace @port-frame/client run start",
+    "start:storybook": "yarn workspace @port-frame/gds run start",
+    "build": "yarn build:client",
+    "build:client": "yarn workspace @port-frame/client run build",
+    "deploy:storybook": "yarn workspace @port-frame/gds run deploy:storybook"
+  },
   "devDependencies": {
     "@port-frame/babel-config": "1.0.0",
     "@port-frame/eslint-config": "1.0.0",
     "@port-frame/prettier-config": "1.0.0",
     "@port-frame/stylelint-config": "1.0.0",
-    "husky": "^4.2.3",
+    "husky": "^3.0.1",
     "license-checker": "^25.0.1",
-    "lint-staged": "^10.0.9",
+    "lint-staged": "^9.2.0",
     "npm-run-all": "^4.1.5"
   }
 }
