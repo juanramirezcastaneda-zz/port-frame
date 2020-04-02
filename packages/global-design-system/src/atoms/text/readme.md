@@ -1,11 +1,9 @@
 # Text
 
-A simple text component line-height and font size
+A simple text component with defined font size
 
 ## Examples
 
 ```javascript
-<Text family="Lato" size="20">
-  Lorem ipsum dolor sit amet.
-</Text>
+<Text size="20">Lorem ipsum dolor sit amet.</Text>
 ```
