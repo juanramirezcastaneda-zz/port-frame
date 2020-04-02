@@ -1,5 +1,5 @@
 const FontFamilies = {
-  lato: 'Lato',
+  roboto: 'Roboto',
 } as const;
 
 export default FontFamilies;
