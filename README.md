@@ -1,7 +1,6 @@
 # port-frame
 
-This is the project intended for creating a base portafolio whitin an iframe
-using React
+This is the project intended for creating a themed portafolio using React
 
 ## Requirements
 
@@ -15,4 +14,4 @@ using React
 
 ## VSCode
 
-If you are using VSCode, optionally you can open the abs-tbc.code-workspace file.
+If you are using VSCode, optionally you can open the port-frame.code-workspace file.
