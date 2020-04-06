@@ -1,10 +1,10 @@
 'use-strict';
 
-import dotenv from 'dotenv';
-import express from 'express';
-import { urlencoded, json } from 'body-parser';
-import { hidePoweredBy, frameguard, xssFilter, noSniff } from 'helmet';
-import cors from 'cors';
+const dotenv = require('dotenv');
+const express = require('express');
+const cors = require('cors');
+const { urlencoded, json } = require('body-parser');
+const { hidePoweredBy, frameguard, xssFilter, noSniff } = require('helmet');
 
 dotenv.config();
 
