@@ -10,17 +10,14 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "sourceMap": true,
+    "noImplicitAny": true,
     "module": "esnext",
-    "noEmit": true,
     "outDir": "dist",
     "target": "es5",
     "rootDirs": ["src"],
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["src/*"]
-    }
-  },
-  "include": ["src"]
+    "baseUrl": "."
+  }
 }
