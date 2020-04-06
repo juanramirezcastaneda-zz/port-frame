@@ -5,13 +5,15 @@
   "description": "A first approach to a portafolio describing juanramirezcastaneda's work online",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --exec babel-node server.js",
+    "start": "node server.js",
     "test": "jest",
     "build": "webpack --config ./webpack.config.js"
   },
   "dependencies": {
     "@types/styled-components": "^4.4.1",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "helmet": "^3.22.0",
     "react": "^16.8.6",
     "react-async": "^10.0.0",
     "react-dom": "^16.8.6",
