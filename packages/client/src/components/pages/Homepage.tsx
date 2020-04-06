@@ -5,5 +5,5 @@ interface Props {
 }
 
 export default function Homepage({ className }: Props) {
-  return <div className={className}>Hello from the main page!</div>;
+  return <div className={className}>Hello from the home page!</div>;
 }
