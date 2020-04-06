@@ -1,36 +1,49 @@
-const path = require('path'),
-  HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const outputDir = path.resolve(__dirname, 'dist');
 
-module.exports = {
+const config = {
+  mode: 'development',
+
   entry: {
     app: ['./src/App.tsx'],
-    vendor: ['react', 'react-dom'],
   },
-  mode: 'development',
+
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: outputDir,
     filename: 'js/[name].bundle.js',
   },
+
   devtool: 'source-map',
+
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
+
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
-        loader: 'ts-loader',
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'ts-loader',
+          },
+        ],
       },
       {
-        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-        loader: 'file-loader?name=[name].[ext]',
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
       },
-      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
     ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
   ],
 };
+
+module.exports = config;
