@@ -6,7 +6,7 @@ const config = {
   mode: 'development',
 
   entry: {
-    app: ['./src/App.tsx'],
+    app: ['./src/index.tsx'],
   },
 
   output: {
@@ -30,6 +30,10 @@ const config = {
             loader: 'ts-loader',
           },
         ],
+      },
+      {
+        test: /\.ico$/,
+        loader: 'file-loader?name=[name].[ext]',
       },
       {
         enforce: 'pre',
