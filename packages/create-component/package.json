@@ -1,0 +1,8 @@
+{
+  "name": "@port-frame/create-component",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "juanramirezcastaneda",
+  "license": "MIT",
+  "private": true
+}
