@@ -44,8 +44,10 @@ async function createComponent(componentType, componentName, srcFolder, template
     );
   } catch (e) {
     if (e.code === 'EEXIST') {
+      // eslint-disable-next-line no-console
       console.error(`Component with name ${folderName} already exists!`);
     } else {
+      // eslint-disable-next-line no-console
       console.error(e);
     }
 
