@@ -4,6 +4,9 @@
       "path": "packages/client"
     },
     {
+      "path": "packages/create-component"
+    },
+    {
       "path": "packages/global-design-system"
     },
     {
