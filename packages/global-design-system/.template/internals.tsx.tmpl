@@ -1,0 +1,7 @@
+import React, { FC } from 'react';
+import { <%= componentName %>Styled } from './styled';
+import { <%= componentName %>Props } from './types';
+
+export const <%= componentName %>: FC<<%= componentName %>Props> = ({ children }) => {
+  return <<%= componentName %>Styled>{children}</<%= componentName %>Styled>;
+};
