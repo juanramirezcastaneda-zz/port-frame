@@ -13,7 +13,8 @@
     "start:storybook": "yarn workspace @port-frame/gds run start",
     "build": "yarn build:client",
     "build:client": "yarn workspace @port-frame/client run build",
-    "deploy:storybook": "yarn workspace @port-frame/gds run deploy:storybook"
+    "deploy:storybook": "yarn workspace @port-frame/gds run deploy:storybook",
+    "create-component": "yarn workspace @port-frame/create-component run create-component"
   },
   "devDependencies": {
     "@port-frame/babel-config": "1.0.0",
