@@ -9,6 +9,7 @@ const readdir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 const mkdir = promisify(fs.mkdir);
+// const existsSync = promisify(fs.existsSync);
 
 async function getTemplateFiles(templateFolder) {
   const files = await readdir(templateFolder);
@@ -31,7 +32,13 @@ async function createComponent(componentType, componentName, srcFolder, template
   const folderName = _.kebabCase(componentName);
   try {
     const newComponentPath = path.join(srcFolder, componentType, folderName);
-    await mkdir(newComponentPath);
+
+    if (fs.existsSync(newComponentPath)) {
+      // eslint-disable-next-line no-console
+      console.log(`The folder name ->${newComponentPath} already exists`);
+    } else {
+      await mkdir(newComponentPath);
+    }
 
     const templates = await getTemplateFiles(templateFolder);
 
@@ -63,7 +70,7 @@ async function createComponent(componentType, componentName, srcFolder, template
     message: 'Project',
     choices: [
       { name: 'Global Design System', value: 'packages/global-design-system/src' },
-      { name: 'Client', value: 'packages/client/src/components' },
+      // { name: 'Client', value: 'packages/client/src/components' },
     ],
   });
 
