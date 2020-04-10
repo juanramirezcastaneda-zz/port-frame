@@ -5,6 +5,9 @@
   "author": "juanramirezcastaneda",
   "license": "MIT",
   "private": true,
+  "bin": {
+    "create-component": "./index.js"
+  },
   "dependencies": {
     "inquirer": "^7.1.0",
     "lodash": "^4.17.15"
