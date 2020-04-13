@@ -3,6 +3,7 @@ import Readme from './readme.md';
 import { Heading } from '.';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 import { HeadingAppearance } from './constants';
+import FontSizes from '~/theme/fontSizes';
 
 export default {
   title: 'atoms|Heading',
@@ -14,6 +15,10 @@ export default {
   },
 };
 
+const fontSizes = Object.keys(FontSizes) as (keyof typeof FontSizes)[];
+
 export const Configurable = () => (
-  <Heading asHeading={select('As heading', HeadingAppearance, 'h1')}>{text('Body Text', 'H1')}</Heading>
+  <Heading asHeading={select('As Heading', HeadingAppearance, 'h1')} fontSize={select('Font Size', fontSizes, '200')}>
+    {text('Body Text', 'H1')}
+  </Heading>
 );
