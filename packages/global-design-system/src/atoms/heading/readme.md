@@ -2,10 +2,13 @@
 
 Description
 
-
 ## Examples
+
 ```javascript
- <Heading />
+<Heading />
 ```
 
 ## Props
+
+- asHeading
+- fontSize
