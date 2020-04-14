@@ -1,14 +1,17 @@
 import styled, { css } from 'styled-components';
 import { HeadingProps } from './types';
 
-export const getHeadingFontSize = ({ fontSize }: HeadingProps) => {
-  return (
-    fontSize &&
-    css`
-      font-size: ${({ theme }) => theme.fontSizes[fontSize]};
-    `
-  );
-};
+export const getHeadingColor = ({ color }: HeadingProps) =>
+  color &&
+  css`
+    color: ${({ theme }) => theme.colors[color]};
+  `;
+
+export const getHeadingFontSize = ({ fontSize }: HeadingProps) =>
+  fontSize &&
+  css`
+    font-size: ${({ theme }) => theme.fontSizes[fontSize]};
+  `;
 
 export const HeadingStyled = styled.h1<HeadingProps>`
   letter-spacing: normal;
