@@ -1,6 +1,15 @@
 import styled, { css } from 'styled-components';
 import { HeadingProps } from './types';
 
+export const getHeadingColor = ({ color }: HeadingProps) => {
+  return (
+    color &&
+    css`
+      color: ${({ theme }) => theme.colors[color]};
+    `
+  );
+};
+
 export const getHeadingFontSize = ({ fontSize }: HeadingProps) => {
   return (
     fontSize &&
