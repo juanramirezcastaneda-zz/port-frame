@@ -13,6 +13,12 @@ export const getHeadingFontSize = ({ fontSize }: HeadingProps) =>
     font-size: ${({ theme }) => theme.fontSizes[fontSize]};
   `;
 
+export const getFontWeight = ({ fontWeight }: HeadingProps) =>
+  fontWeight &&
+  css`
+    font-weight: ${({ theme }) => theme.fontWeights[fontWeight]};
+  `;
+
 export const HeadingStyled = styled.h1<HeadingProps>`
   letter-spacing: normal;
   font-weight: normal;
