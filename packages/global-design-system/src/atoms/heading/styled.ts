@@ -13,9 +13,14 @@ export const getHeadingFontSize = ({ fontSize }: HeadingProps) =>
     font-size: ${({ theme }) => theme.fontSizes[fontSize]};
   `;
 
+export const getHeadingFontWeight = ({ fontWeight }: HeadingProps) =>
+  fontWeight &&
+  css`
+    font-weight: ${({ theme }) => theme.fontWeights[fontWeight]};
+  `;
+
 export const HeadingStyled = styled.h1<HeadingProps>`
   letter-spacing: normal;
-  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
 
@@ -24,5 +29,7 @@ export const HeadingStyled = styled.h1<HeadingProps>`
       font-family: ${theme.fontFamilies.roboto};
     `}
 
+  ${getHeadingColor};
   ${getHeadingFontSize};
+  ${getHeadingFontWeight};
 `;
