@@ -17,3 +17,5 @@ export const Icons = {
   chevronUp: faChevronUp,
   search: faSearch,
 };
+
+export const IconOptions = Object.keys(Icons) as (keyof typeof Icons)[];
