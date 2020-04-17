@@ -1,6 +1,6 @@
 # Heading
 
-Description
+The main heading component to describe a section
 
 ## Examples
 
