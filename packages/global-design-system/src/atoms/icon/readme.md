@@ -5,7 +5,7 @@ Icon component using svg
 ## Examples
 
 ```javascript
-<Icon icon={'bars'}>H3</Icon>
+<Icon icon={'bars'} />
 ```
 
 ## Props
