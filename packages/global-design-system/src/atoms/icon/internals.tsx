@@ -4,11 +4,10 @@ import { IconStyled } from './styled';
 import { IconProps } from './types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export function Icon({ icon }: IconProps) {
-  const iconDefinition = Icons[icon];
+export function Icon({ icon, ...props }: IconProps) {
   return (
     <IconStyled>
-      <FontAwesomeIcon icon={iconDefinition} />
+      <FontAwesomeIcon icon={Icons[icon]} {...props} />
     </IconStyled>
   );
 }
