@@ -2,7 +2,7 @@ import React from 'react';
 import Readme from './readme.md';
 import { Icon } from '.';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { IconOptions } from './constants';
+import { Icons, IconOptions } from './constants';
 
 export default {
   title: 'atoms|Icon',
@@ -15,3 +15,17 @@ export default {
 };
 
 export const Configurable = () => <Icon icon={select('Icon', IconOptions, 'bars')} />;
+
+export const AllIcons = () => {
+  return (
+    <>
+      {IconOptions.map((icon, i) => {
+        return (
+          <span key={i}>
+            <Icon icon={icon} />
+          </span>
+        );
+      })}
+    </>
+  );
+};
