@@ -15,3 +15,17 @@ export default {
 };
 
 export const Configurable = () => <Icon icon={select('Icon', IconOptions, 'bars')} />;
+
+export const AllIcons = () => {
+  return (
+    <>
+      {IconOptions.map((icon, i) => {
+        return (
+          <span key={i}>
+            <Icon icon={icon} />
+          </span>
+        );
+      })}
+    </>
+  );
+};

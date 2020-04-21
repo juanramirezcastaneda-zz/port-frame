@@ -1,14 +1,14 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { HeadingStyled } from './styled';
 import { HeadingProps } from './types';
 
-export const Heading: FC<HeadingProps> = ({ asHeading, children, color, fontSize, fontWeight }) => {
+export function Heading({ asHeading, children, color, fontSize, fontWeight }: HeadingProps) {
   return (
     <HeadingStyled as={asHeading} color={color} fontSize={fontSize} fontWeight={fontWeight}>
       {children}
     </HeadingStyled>
   );
-};
+}
 
 Heading.defaultProps = {
   asHeading: 'h1',
