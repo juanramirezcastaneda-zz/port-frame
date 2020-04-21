@@ -2,7 +2,7 @@ import React from 'react';
 import Readme from './readme.md';
 import { Icon } from '.';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Icons, IconOptions } from './constants';
+import { IconOptions } from './constants';
 
 export default {
   title: 'atoms|Icon',
