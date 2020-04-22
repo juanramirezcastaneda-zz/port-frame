@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import Readme from './readme.md';
 import { Icon } from '.';
 import { withKnobs, select } from '@storybook/addon-knobs';
@@ -17,15 +18,26 @@ export default {
 export const Configurable = () => <Icon icon={select('Icon', IconOptions, 'bars')} />;
 
 export const AllIcons = () => {
+  const IconWrapper = styled.div`
+    border: 1px black solid;
+    padding: 2rem;
+    display: inline-flex;
+    top: 0;
+  `;
+
+  const IconsContainer = styled.div`
+    position: relative;
+  `;
+
   return (
-    <>
+    <IconsContainer>
       {IconOptions.map((icon, i) => {
         return (
-          <span key={i}>
+          <IconWrapper key={i}>
             <Icon icon={icon} />
-          </span>
+          </IconWrapper>
         );
       })}
-    </>
+    </IconsContainer>
   );
 };
