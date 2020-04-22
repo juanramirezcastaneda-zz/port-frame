@@ -8,7 +8,8 @@ import {
   faSearch,
 } from '@fortawesome/free-solid-svg-icons';
 
-export const Icons = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const Icons: { [key: string]: any } = {
   bars: faBars,
   bookmark: faBookmark,
   chevronLeft: faChevronLeft,
