@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render a text component as expected 1`] = `
+<span
+  className="sc-bdVaJa ioNgrB"
+  size="100"
+>
+  fakeText
+</span>
+`;
