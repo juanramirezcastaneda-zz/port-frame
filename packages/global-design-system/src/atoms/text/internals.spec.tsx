@@ -9,6 +9,12 @@ describe('Text', () => {
 
     const theme = {
       fontSizes: ['100'],
+      breakpointsMax: [],
+      breakpointNumbers: [],
+      breakpoints: [],
+      colors: [],
+      fontFamilies: [],
+      fontWeights: [],
     };
 
     const tree = renderer
