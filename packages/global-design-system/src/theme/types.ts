@@ -1,4 +1,5 @@
+import { DefaultTheme } from 'styled-components';
+
 export interface ThemeProviderProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  theme?: any;
+  theme?: DefaultTheme;
 }
