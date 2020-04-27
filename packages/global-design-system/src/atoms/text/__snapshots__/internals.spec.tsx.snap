@@ -2,7 +2,7 @@
 
 exports[`Text should render a text component as expected 1`] = `
 <span
-  className="sc-bdVaJa ioNgrB"
+  className="sc-bdVaJa cywOdF"
   size="100"
 >
   fakeText
