@@ -2,6 +2,10 @@ import React from 'react';
 import { TextStyled } from './styled';
 import { TextProps } from './types';
 
-export const Text: React.FC<TextProps> = (props) => {
-  return <TextStyled {...props} />;
-};
+export function Text({ children, className, size }: TextProps) {
+  return (
+    <TextStyled className={className} size={size}>
+      {children}
+    </TextStyled>
+  );
+}
