@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Text } from './internals';
-import defaultTheme from '~/theme';
+import { MockThemeProvider } from '~/theme/mock';
 
 describe('Text', () => {
   it('should render a text component as expected', () => {
@@ -10,9 +10,9 @@ describe('Text', () => {
 
     const tree = renderer
       .create(
-        <Text theme={defaultTheme} size={givenSize}>
-          {givenText}
-        </Text>
+        <MockThemeProvider>
+          <Text size={givenSize}>{givenText}</Text>
+        </MockThemeProvider>
       )
       .toJSON();
 
