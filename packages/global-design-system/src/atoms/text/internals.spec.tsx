@@ -6,7 +6,7 @@ import { MockThemeProvider } from '~/theme/mock';
 describe('Text', () => {
   it('should render a text component as expected', () => {
     const givenText = `fakeText`;
-    const givenSize = `100`;
+    const givenSize = `200`;
 
     const tree = renderer
       .create(
