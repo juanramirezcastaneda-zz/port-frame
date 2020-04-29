@@ -17,10 +17,6 @@
     "create-component": "yarn workspace @port-frame/create-component run create-component"
   },
   "devDependencies": {
-    "@port-frame/babel-config": "1.0.0",
-    "@port-frame/eslint-config": "1.0.0",
-    "@port-frame/prettier-config": "1.0.0",
-    "@port-frame/stylelint-config": "1.0.0",
     "husky": "^3.0.1",
     "license-checker": "^25.0.1",
     "lint-staged": "^9.2.0",
