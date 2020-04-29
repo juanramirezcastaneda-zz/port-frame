@@ -26,6 +26,6 @@ jobs:
       - name: Run test before build
         run: |
           echo Running CI.
-          echo ls
-          npm install
-          npm run test
+          ls
+          yarn install
+          yarn test
