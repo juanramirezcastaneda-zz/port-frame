@@ -24,8 +24,8 @@ export const DateInputContainerStyled = styled.div`
   }
 `;
 
-// export const LabelStyled = styled.label`
-//   ${css`
-//     margin-bottom: ${({ theme }) => theme.margins.label};
-//   `}
-// `;
+export const LabelStyled = styled.label`
+  ${css`
+    margin-bottom: ${({ theme }) => theme.margins.label};
+  `}
+`;
