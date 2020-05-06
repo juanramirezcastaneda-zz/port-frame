@@ -5,6 +5,7 @@ import Colors from './colors';
 import FontSizes from './fontSizes';
 import FontFamilies from './fontFamilies';
 import FontWeights from './fontWeight';
+import Margins from './margins';
 
 const theme = {
   breakpointsMax: BreakpointsMax,
@@ -14,6 +15,7 @@ const theme = {
   fontFamilies: FontFamilies,
   fontSizes: FontSizes,
   fontWeights: FontWeights,
+  margins: Margins,
 } as const;
 
 export default theme;

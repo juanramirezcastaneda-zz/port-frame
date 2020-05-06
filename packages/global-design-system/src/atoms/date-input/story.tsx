@@ -30,6 +30,7 @@ function dateKnob(name: string, defaultValue: Date) {
 export const Configurable = () => (
   <DateInput
     disabled={boolean('IsDisabled', false)}
+    isInline={boolean('IsInline', false)}
     label={text('Label', DEFAULT_LABEL)}
     setCurrentValue={action('Change Date')}
     value={dateKnob('Date', new Date())}
