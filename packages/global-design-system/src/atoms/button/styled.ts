@@ -24,5 +24,18 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
 }
 
 export const ButtonStyled = styled.button<ButtonProps>`
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ${({ theme }) => theme.fontFamilies.roboto};
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: 0.1s all;
+
   ${getAppearanceStyles}
 `;
