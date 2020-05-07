@@ -13,11 +13,9 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
         return css`
           ${baseStyles};
         `;
-      default:
+      case 'Default':
         return css`
           ${baseStyles};
-          border-color: ${theme.colors.whiteCore};
-          color: ${theme.colors.whiteCore};
         `;
     }
   }
