@@ -3,15 +3,27 @@ import { DateInputProps } from './types';
 
 export const DateInputStyled = styled.div<Pick<DateInputProps, 'isInline'>>`
   .react-datepicker-wrapper {
+    height: 38px;
     width: 100%;
+  }
+  .react-datepicker__input-container {
+    height: 100%;
   }
 
   input {
     border: none;
-    box-sizing: border-box;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 100%;
     outline: none;
+    padding: 6px 12px;
     width: 100%;
+    :focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      outline: 0;
+    }
   }
+
   display: flex;
   ${(p) => {
     if (!p.isInline) {
@@ -29,13 +41,8 @@ export const DateInputStyled = styled.div<Pick<DateInputProps, 'isInline'>>`
 export const DateInputContainerStyled = styled.div`
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+  height: 38px;
   width: 100%;
-  :focus > input {
-    background-color: transparent;
-    border-color: #80bdff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    outline: 0;
-  }
 `;
 
 export const LabelStyled = styled.label<Pick<DateInputProps, 'isInline'>>`
