@@ -14,13 +14,17 @@ export const DateInputStyled = styled.div<Pick<DateInputProps, 'isInline'>>`
     border: none;
     border-radius: 0.25rem;
     font-size: 1rem;
-    height: 100%;
+    height: 95%;
     outline: none;
     padding: 6px 12px;
     width: 100%;
     :focus {
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-      outline: 0;
+    }
+    :disabled {
+      background-color: #e9ecef;
+      color: #495057;
+      cursor: not-allowed;
     }
   }
 
