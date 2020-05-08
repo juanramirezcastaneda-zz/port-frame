@@ -8,10 +8,13 @@ export const DateInputStyled = styled.div<Pick<DateInputProps, 'isInline'>>`
 
   input {
     border: none;
-    box-sizing: border-box;
+    font-size: 1rem;
+    min-height: 2.5rem;
     outline: none;
+    padding: 0;
     width: 100%;
   }
+
   display: flex;
   ${(p) => {
     if (!p.isInline) {
@@ -29,6 +32,7 @@ export const DateInputStyled = styled.div<Pick<DateInputProps, 'isInline'>>`
 export const DateInputContainerStyled = styled.div`
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+  height: 2.4rem;
   width: 100%;
   :focus > input {
     background-color: transparent;
