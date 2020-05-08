@@ -18,6 +18,10 @@ export const DateInputStyled = styled.div<Pick<DateInputProps, 'isInline'>>`
     outline: none;
     padding: 6px 12px;
     width: 100%;
+    :focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      outline: 0;
+    }
   }
 
   display: flex;
@@ -39,11 +43,6 @@ export const DateInputContainerStyled = styled.div`
   border-radius: 0.25rem;
   height: 38px;
   width: 100%;
-  :focus > input {
-    border-color: #80bdff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    outline: 0;
-  }
 `;
 
 export const LabelStyled = styled.label<Pick<DateInputProps, 'isInline'>>`
