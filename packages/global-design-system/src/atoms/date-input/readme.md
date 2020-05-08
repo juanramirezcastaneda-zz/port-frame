@@ -12,5 +12,7 @@ Date input to use as a form control
 
 - className
 - disabled?
+- isInline?
+- label
 - setCurrentValue
 - value
