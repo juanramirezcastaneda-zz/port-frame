@@ -1,18 +1,17 @@
-# DateInput
+# Input
 
-Date input to use as a form control
+Input to use as a form control with optional label
 
 ## Examples
 
 ```javascript
-<DateInput />
+<Input />
 ```
 
 ## Props
 
+- label
 - className
 - disabled?
-- isInline?
-- label
 - setCurrentValue
 - value
