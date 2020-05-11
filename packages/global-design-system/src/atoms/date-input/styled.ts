@@ -30,13 +30,13 @@ export const DateInputStyled = styled.div<Pick<DateInputProps, 'isInline'>>`
 
   display: flex;
   ${(p) => {
-    if (!p.isInline) {
+    if (p.isInline) {
       return css`
-        flex-direction: column;
+        flex-direction: row;
       `;
     } else {
       return css`
-        flex-direction: row;
+        flex-direction: column;
       `;
     }
   }}
@@ -52,16 +52,16 @@ export const DateInputContainerStyled = styled.div`
 export const LabelStyled = styled.label<Pick<DateInputProps, 'isInline'>>`
   white-space: pre;
   ${(p) => {
-    if (!p.isInline) {
-      return css`
-        margin-bottom: ${({ theme }) => theme.margins.label};
-        margin-right: 0;
-      `;
-    } else {
+    if (p.isInline) {
       return css`
         align-self: center;
         margin-right: ${({ theme }) => theme.margins.labelInline};
         margin-bottom: 0;
+      `;
+    } else {
+      return css`
+        margin-bottom: ${({ theme }) => theme.margins.label};
+        margin-right: 0;
       `;
     }
   }};
