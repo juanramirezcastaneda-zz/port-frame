@@ -1,14 +1,16 @@
 import React from 'react';
 import { InputProps } from './types';
-import { LabelStyled, InputStyled, InputComponentStyled } from './styled';
+import { LabelStyled, InputStyled, InputComponentStyled, InputContainerStyled } from './styled';
 
 export function Input({ disabled, isInline, label, placeholder, type, value }: InputProps) {
-  const labelComponent = label ? <LabelStyled>{label}</LabelStyled> : null;
+  const labelComponent = label ? <LabelStyled isInline={isInline}>{label}</LabelStyled> : null;
 
   return (
-    <InputStyled disabled={disabled} isInline={isInline}>
+    <InputStyled isInline={isInline}>
       {labelComponent}
-      <InputComponentStyled placeholder={placeholder} type={type} value={value} />
+      <InputContainerStyled>
+        <InputComponentStyled disabled={disabled} placeholder={placeholder} type={type} value={value} />
+      </InputContainerStyled>
     </InputStyled>
   );
 }
