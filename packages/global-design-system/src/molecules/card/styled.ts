@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { CardProps } from './types';
 import { TextStyled } from '~/atoms/text';
-import { ReactComponent as IconContainerBackground } from '~/assets/product-category-placeholder-hover.svg';
+// import { ReactComponent as IconContainerBackground } from '~/assets/product-category-placeholder-hover.svg';
 
 export const IconContainer = styled.div`
   display: flex;
@@ -14,13 +14,13 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const IconContainerBackgroundStyled = styled(IconContainerBackground)`
-  transition: 0.2s all;
+// export const IconContainerBackgroundStyled = styled(IconContainerBackground)`
+//   transition: 0.2s all;
 
-  @media (max-width: ${(p) => p.theme.breakpointsMax[3]}) {
-    transform: scale(0.5);
-  }
-`;
+//   @media (max-width: ${(p) => p.theme.breakpointsMax[3]}) {
+//     transform: scale(0.5);
+//   }
+// `;
 
 export const hoverMobileStyles = css`
   text-decoration: none;
