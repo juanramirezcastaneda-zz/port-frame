@@ -3,10 +3,12 @@ import { InputProps } from './types';
 
 export const InputStyled = styled.div<Pick<InputProps, 'isInline'>>`
   display: flex;
+
   ${(p) => {
     if (p.isInline) {
       return css`
         flex-direction: row;
+        height: 38px;
       `;
     } else {
       return css`
@@ -34,11 +36,20 @@ export const InputComponentStyled = styled.input`
   }
 `;
 
-export const InputContainerStyled = styled.div`
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  height: 38px;
-  width: 100%;
+export const InputContainerStyled = styled.div<Pick<InputProps, 'type'>>`
+  ${(p) => {
+    switch (p.type) {
+      case 'text':
+        return css`
+          border: 1px solid #ced4da;
+          border-radius: 0.25rem;
+          height: 38px;
+          width: 100%;
+        `;
+      case 'checkbox':
+        return css``;
+    }
+  }}
 `;
 
 export const LabelStyled = styled.label<Pick<InputProps, 'isInline'>>`
