@@ -8,7 +8,7 @@ export function Input({ disabled, isInline, label, placeholder, type, value }: I
   return (
     <InputStyled isInline={isInline}>
       {labelComponent}
-      <InputContainerStyled>
+      <InputContainerStyled type={type}>
         <InputComponentStyled disabled={disabled} placeholder={placeholder} type={type} value={value} />
       </InputContainerStyled>
     </InputStyled>
