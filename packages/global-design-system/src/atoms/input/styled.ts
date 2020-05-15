@@ -47,7 +47,12 @@ export const InputContainerStyled = styled.div<Pick<InputProps, 'type'>>`
           width: 100%;
         `;
       case 'checkbox':
-        return css``;
+        return css`
+          > input {
+            height: 38px;
+            margin: auto;
+          }
+        `;
     }
   }}
 `;
