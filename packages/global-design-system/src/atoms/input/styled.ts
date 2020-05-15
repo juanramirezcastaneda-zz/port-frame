@@ -38,19 +38,23 @@ export const InputComponentStyled = styled.input`
 
 export const InputContainerStyled = styled.div<Pick<InputProps, 'type'>>`
   ${(p) => {
+    const baseStyles = css`
+      height: 38px;
+    `;
     switch (p.type) {
       case 'text':
         return css`
+          ${baseStyles}
           border: 1px solid #ced4da;
           border-radius: 0.25rem;
-          height: 38px;
           width: 100%;
         `;
       case 'checkbox':
         return css`
           > input {
-            height: 38px;
+            ${baseStyles}
             margin: auto;
+            width: auto;
           }
         `;
     }
