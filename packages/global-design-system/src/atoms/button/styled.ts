@@ -12,10 +12,41 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
       case 'Primary':
         return css`
           ${baseStyles};
+          border-color: ${theme.colors.blue};
+
+          &:hover,
+          &:focus {
+            background: ${theme.colors.blue};
+            color: ${theme.colors.whiteCore};
+          }
+
+          &[disabled] {
+            cursor: not-allowed;
+            opacity: 60%;
+          }
         `;
       case 'Default':
         return css`
           ${baseStyles};
+          border-color: ${theme.colors.blackCore};
+        `;
+    }
+  } else {
+    switch (appearance) {
+      case 'Primary':
+        return css`
+          background: ${theme.colors.blue};
+          color: ${theme.colors.whiteCore};
+
+          &:hover,
+          &:focus {
+            opacity: 80%;
+          }
+
+          &[disabled] {
+            cursor: not-allowed;
+            opacity: 60%;
+          }
         `;
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Readme from './readme.md';
 import { Button } from '.';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
 import { ButtonAppearance } from './constants';
 
 export default {
@@ -15,5 +15,11 @@ export default {
 };
 
 export const Configurable = () => (
-  <Button appearance={select('Appearance', ButtonAppearance, 'Default')}>{text('Button Text', 'Button')}</Button>
+  <Button
+    appearance={select('Appearance', ButtonAppearance, 'Default')}
+    disabled={boolean('Disabled', false)}
+    ghost={boolean('Ghost', false)}
+  >
+    {text('Button Text', 'Button')}
+  </Button>
 );
