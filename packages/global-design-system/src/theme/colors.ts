@@ -2,7 +2,7 @@ const Colors = {
   blackCore: '#000000',
   blackText: '#191919',
   gray: '#353435',
-  blue: '#396FAD',
+  blue: '#396fad',
   lightBlue: '#498dda',
   green: '#2cae44',
   lightGreen: '#b0ffbe',
@@ -11,7 +11,7 @@ const Colors = {
   red: '#c82135',
   lightRed: '#ff96a9',
   yellow: '#fad155',
-  lightYellow: '#FFE8A3',
+  lightYellow: '#ffe8a3',
   whiteCore: '#ffffff',
 } as const;
 
