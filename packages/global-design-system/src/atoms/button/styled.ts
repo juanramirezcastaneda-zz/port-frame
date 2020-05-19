@@ -48,6 +48,11 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
             opacity: 60%;
           }
         `;
+      case 'Default':
+        return css`
+          background: ${theme.colors.gray};
+          color: ${theme.colors.whiteCore};
+        `;
     }
   }
 }
