@@ -12,11 +12,46 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
       case 'Primary':
         return css`
           ${baseStyles};
-          border-color: ${theme.colors.blue};
+          color: ${theme.colors.blue};
+          border-color: ${theme.colors.lightBlue};
 
           &:hover,
           &:focus {
             background: ${theme.colors.blue};
+            color: ${theme.colors.whiteCore};
+          }
+
+          &[disabled] {
+            cursor: not-allowed;
+            opacity: 60%;
+          }
+        `;
+      case 'Secondary':
+        return css`
+          ${baseStyles};
+          color: ${theme.colors.red};
+          border-color: ${theme.colors.lightRed};
+
+          &:hover,
+          &:focus {
+            background: ${theme.colors.red};
+            color: ${theme.colors.whiteCore};
+          }
+
+          &[disabled] {
+            cursor: not-allowed;
+            opacity: 60%;
+          }
+        `;
+      case 'Tertiary':
+        return css`
+          ${baseStyles};
+          color: ${theme.colors.yellow};
+          border-color: ${theme.colors.lightYellow};
+
+          &:hover,
+          &:focus {
+            background: ${theme.colors.yellow};
             color: ${theme.colors.whiteCore};
           }
 
@@ -47,6 +82,11 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
             cursor: not-allowed;
             opacity: 60%;
           }
+        `;
+      case 'Default':
+        return css`
+          background: ${theme.colors.gray};
+          color: ${theme.colors.whiteCore};
         `;
     }
   }
