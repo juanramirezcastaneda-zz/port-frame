@@ -103,7 +103,7 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
         return css`
           background: ${theme.colors.yellow};
           border-color: ${theme.colors.lightYellow};
-          color: ${theme.colors.whiteCore};
+          color: ${theme.colors.gray};
 
           &:hover,
           &:focus {
