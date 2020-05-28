@@ -83,6 +83,22 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
             opacity: 60%;
           }
         `;
+      case 'Secondary':
+        return css`
+          background: ${theme.colors.red};
+          border-color: ${theme.colors.lightRed};
+          color: ${theme.colors.whiteCore};
+
+          &:hover,
+          &:focus {
+            opacity: 80%;
+          }
+
+          &[disabled] {
+            cursor: not-allowed;
+            opacity: 60%;
+          }
+        `;
       case 'Default':
         return css`
           background: ${theme.colors.gray};
