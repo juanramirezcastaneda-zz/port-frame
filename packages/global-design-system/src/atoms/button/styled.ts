@@ -8,6 +8,11 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
       border: solid 1px;
       background: transparent;
       color: ${theme.colors.blackText};
+
+      &[disabled] {
+        cursor: not-allowed;
+        opacity: 60%;
+      }
     `;
     switch (appearance) {
       case 'Primary':
@@ -21,11 +26,6 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
             background: ${theme.colors.blue};
             color: ${theme.colors.whiteCore};
           }
-
-          &[disabled] {
-            cursor: not-allowed;
-            opacity: 60%;
-          }
         `;
       case 'Secondary':
         return css`
@@ -38,11 +38,6 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
             background: ${theme.colors.red};
             color: ${theme.colors.whiteCore};
           }
-
-          &[disabled] {
-            cursor: not-allowed;
-            opacity: 60%;
-          }
         `;
       case 'Tertiary':
         return css`
@@ -54,11 +49,6 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
           &:focus {
             background: ${theme.colors.yellow};
             color: ${theme.colors.whiteCore};
-          }
-
-          &[disabled] {
-            cursor: not-allowed;
-            opacity: 60%;
           }
         `;
       case 'Default':
@@ -106,6 +96,8 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
         return css`
           background: ${theme.colors.gray};
           color: ${theme.colors.whiteCore};
+
+          ${baseStyles}
         `;
     }
   }
