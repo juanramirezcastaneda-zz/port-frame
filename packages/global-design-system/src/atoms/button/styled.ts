@@ -2,8 +2,9 @@ import styled, { DefaultTheme, ThemedStyledProps, css } from 'styled-components'
 import { ButtonProps } from './types';
 
 function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<ButtonProps, DefaultTheme>) {
+  let baseStyles;
   if (ghost) {
-    const baseStyles = css`
+    baseStyles = css`
       border: solid 1px;
       background: transparent;
       color: ${theme.colors.blackText};
@@ -67,21 +68,39 @@ function getAppearanceStyles({ appearance, ghost, theme }: ThemedStyledProps<But
         `;
     }
   } else {
+    baseStyles = css`
+      &:hover,
+      &:focus {
+        opacity: 80%;
+      }
+
+      &[disabled] {
+        cursor: not-allowed;
+        opacity: 60%;
+      }
+    `;
     switch (appearance) {
       case 'Primary':
         return css`
           background: ${theme.colors.blue};
           color: ${theme.colors.whiteCore};
+          ${baseStyles}
+        `;
+      case 'Secondary':
+        return css`
+          background: ${theme.colors.red};
+          border-color: ${theme.colors.lightRed};
+          color: ${theme.colors.whiteCore};
 
-          &:hover,
-          &:focus {
-            opacity: 80%;
-          }
+          ${baseStyles}
+        `;
+      case 'Tertiary':
+        return css`
+          background: ${theme.colors.yellow};
+          border-color: ${theme.colors.lightYellow};
+          color: ${theme.colors.gray};
 
-          &[disabled] {
-            cursor: not-allowed;
-            opacity: 60%;
-          }
+          ${baseStyles}
         `;
       case 'Default':
         return css`
