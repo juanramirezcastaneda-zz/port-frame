@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
 import { ButtonAppearance } from './constants';
 
 export interface ButtonComponentProps {
@@ -9,4 +9,14 @@ export interface ButtonComponentProps {
   ghost?: boolean;
 }
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & ButtonComponentProps;
+export interface ButtonComponentAsLinkProps {
+  appearance?: typeof ButtonAppearance[number];
+  as: 'a';
+  className?: string;
+  disabled?: boolean;
+  ghost?: boolean;
+}
+
+export type ButtonProps =
+  | (ButtonHTMLAttributes<HTMLButtonElement> & ButtonComponentProps)
+  | (AnchorHTMLAttributes<HTMLAnchorElement> & ButtonComponentAsLinkProps);
