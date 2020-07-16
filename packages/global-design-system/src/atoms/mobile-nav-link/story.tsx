@@ -1,7 +1,7 @@
 import React from 'react';
 import Readme from './readme.md';
 import { MobileNavLink } from '.';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
 export default {
   title: 'atoms|MobileNavLink',
@@ -13,4 +13,8 @@ export default {
   },
 };
 
-export const Configurable = () => <MobileNavLink />;
+export const Configurable = () => (
+  <MobileNavLink href={text('URL', 'https://www.linkedin.com/feed/')} sublink={boolean('Sub link', false)}>
+    {text('Text', 'Home')}
+  </MobileNavLink>
+);
