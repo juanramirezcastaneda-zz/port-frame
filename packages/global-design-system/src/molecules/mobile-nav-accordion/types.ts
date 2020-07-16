@@ -1,7 +1,6 @@
-import { HTMLAttributes } from 'react';
-
-export interface MobileNavAccordionComponentProps {
+export interface MobileNavAccordionProps {
+  children: React.ReactNode;
   className?: string;
+  title: string;
+  url: string;
 }
-
-export type MobileNavAccordionProps = HTMLAttributes<HTMLDivElement> & MobileNavAccordionComponentProps;
