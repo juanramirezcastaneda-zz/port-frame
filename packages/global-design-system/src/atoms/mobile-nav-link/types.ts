@@ -1,7 +1,9 @@
 import { HTMLAttributes } from 'react';
 
 export interface MobileNavLinkComponentProps {
-  className?: string;
+  children?: string;
+  href?: string;
+  sublink?: boolean;
 }
 
-export type MobileNavLinkProps = HTMLAttributes<HTMLDivElement> & MobileNavLinkComponentProps;
+export type MobileNavLinkProps = HTMLAttributes<HTMLAnchorElement> & MobileNavLinkComponentProps;
