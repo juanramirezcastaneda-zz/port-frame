@@ -1,7 +1,15 @@
 import { HTMLAttributes } from 'react';
+import { BackgroundOptions } from './constants';
 
-export interface HeaderComponentProps {
-  className?: string;
+export type BackgroundOptionsType = typeof BackgroundOptions[number];
+
+export interface HeaderProps {
+  background: BackgroundOptionsType;
+  loggedIn: boolean;
 }
 
-export type HeaderProps = HTMLAttributes<HTMLDivElement> & HeaderComponentProps;
+export interface HeaderStyledProps {
+  background: 'dark' | 'transparent';
+}
+
+export type HeaderComponentProps = HTMLAttributes<HTMLDivElement> & HeaderProps;
