@@ -1,11 +1,12 @@
 # Header
 
-Description
-
+Header component that includes navigation
 
 ## Examples
-```javascript
- <Header />
-```
 
 ## Props
+
+- background
+  - transparent
+  - dark
+  - auto (changes on scroll)
