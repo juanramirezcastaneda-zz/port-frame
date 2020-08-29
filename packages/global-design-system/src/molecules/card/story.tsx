@@ -23,6 +23,6 @@ const Wrapper = styled.div`
 
 export const Configurable = () => (
   <Wrapper>
-    <Card name={text('Category Name', 'Product Category')} href={text('Caregory Link', '#')} />
+    <Card name={text('Service Name', 'Service Category')} href={text('Service Link', '#')} />
   </Wrapper>
 );
